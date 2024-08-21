@@ -5,21 +5,18 @@ const {
 } = require("nodemailer")
 
 createTestAccount((err, account) => {
-  // create reusable transporter object using the default SMTP transport
   let transporter = createTransport({
     host: 'smtp.ethereal.email',
     port: 587,
-    secure: false, // true for 465, false for other ports
+    secure: false,
     auth: {
-      user: account.user, // generated ethereal user
-      pass: account.pass // generated ethereal password
+      user: account.user,
+      pass: account.pass
     }
   });
 });
 
 async function main() {
-
-
 
   const {
     user,
@@ -28,24 +25,23 @@ async function main() {
   const transporter = createTransport({
     host: 'smtp.ethereal.email',
     port: 587,
-    secure: false, // true for 465, false for other ports
+    secure: false,
     auth: {
-      user, // generated ethereal user
-      pass // generated ethereal password
+      user,
+      pass
     }
   });
-  // send mail with defined transport object
+
   const info = await transporter.sendMail({
-    from: 'az taraf amin ', // sender address
-    to: "behnammohammadi@gahoo.com", // list of receivers
-    subject: "Hello ✔", // Subject line
-    text: "Hello world?", // plain text body
-    html: `<p>Hello <span style="color: red;">world</span></p>`, // html body
+    from: 'az taraf amin ',
+    to: "behnammohammadi@gahoo.com",
+    subject: "Hello ✔",
+    text: "Hello world?",
+    html: `<p>Hello <span style="color: red;">world</span></p>`,
   });
 
   console.log('Preview URL: ' + getTestMessageUrl(info));
 
-  // Message sent: <d786aa62-4e0a-070a-47ed-0b0666549519@ethereal.email>
 }
 
 main().catch(console.error);

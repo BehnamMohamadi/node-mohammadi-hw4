@@ -14,7 +14,7 @@ const convertFile = async (inputPath, outputPath) => {
   }
 };
 
-const inputFilePath = 'word doc.docx';
-const outputFilePath = 'path/to/your/output.pdf';
+const inputFilePath = './word doc.docx';
+const outputFilePath = './output.pdf';
 
 convertFile(inputFilePath, outputFilePath);
