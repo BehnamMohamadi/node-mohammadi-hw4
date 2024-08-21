@@ -1,0 +1,15 @@
+{
+  "name": "fileformatter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./convert-word2pdf"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "docx-pdf": "^0.0.1",
+    "libreoffice-convert": "^1.6.0"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "email-sender",
+  "version": "1.0.0",
+  "description": "sending email",
+  "main": "emailApp.js",
+  "scripts": {
+    "start": "node emailApp.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nodemailer": "^6.9.14"
+  }
+}
